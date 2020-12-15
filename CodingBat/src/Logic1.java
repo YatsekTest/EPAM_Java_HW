@@ -8,7 +8,7 @@ public class Logic1 {
     }
 
     static boolean squirrelPlay(int temp, boolean isSummer) {
-        return (!isSummer && temp >= 60 && temp <=90) || (isSummer && temp >= 60 && temp <=100);
+        return (temp >= 60 && temp <=90) || (isSummer && temp >= 60 && temp <=100);
     }
 
     static int dateFashion(int you, int date) {
