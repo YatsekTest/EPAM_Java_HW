@@ -8,7 +8,12 @@ public class Logic1 {
 //        System.out.println(sortaSum(10, 9));
 //        System.out.println(alarmClock(1, false));
 //        System.out.println(love6(-7, 1));
-        System.out.println(in1To10(11, true));
+//        System.out.println(in1To10(11, true));
+        System.out.println(specialEleven(22));
+    }
+
+    static boolean specialEleven(int n) {
+        return n % 11 == 0 || n % 11 == 1;
     }
 
     static boolean in1To10(int n, boolean outsideMode) {
