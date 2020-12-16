@@ -9,7 +9,12 @@ public class Logic1 {
 //        System.out.println(alarmClock(1, false));
 //        System.out.println(love6(-7, 1));
 //        System.out.println(in1To10(11, true));
-        System.out.println(specialEleven(22));
+//        System.out.println(specialEleven(22));
+        System.out.println(more20(43));
+    }
+
+    static boolean more20(int n) {
+        return n % 20 == 1 || n % 20 == 2;
     }
 
     static boolean specialEleven(int n) {
