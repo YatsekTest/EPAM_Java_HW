@@ -4,8 +4,15 @@ public class Logic1 {
 //        System.out.println(cigarParty(70, true));
 //        System.out.println(dateFashion(2, 9));
 //        System.out.println(squirrelPlay(95, true));
-        System.out.println(caughtSpeeding(80, false));
+//        System.out.println(caughtSpeeding(80, false));
+        System.out.println(sortaSum(10, 9));
     }
+
+    static int sortaSum(int a, int b) {
+        int sum = a + b;
+        return (sum >=10 && sum <=19) ? 20 : sum;
+    }
+
 
     static int caughtSpeeding(int speed, boolean isBirthday) {
         int birthday = 0;
