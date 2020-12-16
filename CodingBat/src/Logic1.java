@@ -6,7 +6,13 @@ public class Logic1 {
 //        System.out.println(squirrelPlay(95, true));
 //        System.out.println(caughtSpeeding(80, false));
 //        System.out.println(sortaSum(10, 9));
-        System.out.println(alarmClock(1, false));
+//        System.out.println(alarmClock(1, false));
+        System.out.println(love6(-7, 1));
+    }
+
+    static boolean love6(int a, int b) {
+//        System.out.println("a + b = " + Math.abs(a + b) + "\na - b = " + Math.abs(a - b));
+        return a == 6 || b == 6 || Math.abs(a - b) == 6 || (a + b) == 6;
     }
 
     static String alarmClock(int day, boolean vacation) {
