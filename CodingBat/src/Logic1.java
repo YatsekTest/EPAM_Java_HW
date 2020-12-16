@@ -7,7 +7,12 @@ public class Logic1 {
 //        System.out.println(caughtSpeeding(80, false));
 //        System.out.println(sortaSum(10, 9));
 //        System.out.println(alarmClock(1, false));
-        System.out.println(love6(-7, 1));
+//        System.out.println(love6(-7, 1));
+        System.out.println(in1To10(11, true));
+    }
+
+    static boolean in1To10(int n, boolean outsideMode) {
+        return !outsideMode ? (n >= 1 && n <= 10) : (n <= 1 || n >= 10);
     }
 
     static boolean love6(int a, int b) {
