@@ -5,14 +5,23 @@ public class Logic1 {
 //        System.out.println(dateFashion(2, 9));
 //        System.out.println(squirrelPlay(95, true));
 //        System.out.println(caughtSpeeding(80, false));
-        System.out.println(sortaSum(10, 9));
+//        System.out.println(sortaSum(10, 9));
+        System.out.println(alarmClock(1, false));
+    }
+
+    static String alarmClock(int day, boolean vacation) {
+        boolean isWeekend = (day == 6 || day == 0);
+        if (vacation) {
+            if (isWeekend) return "off";
+            else return "10:00";
+        } else if (isWeekend) return "10:00";
+        else return "7:00";
     }
 
     static int sortaSum(int a, int b) {
         int sum = a + b;
-        return (sum >=10 && sum <=19) ? 20 : sum;
+        return (sum >= 10 && sum <= 19) ? 20 : sum;
     }
-
 
     static int caughtSpeeding(int speed, boolean isBirthday) {
         int birthday = 0;
