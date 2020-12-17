@@ -14,7 +14,12 @@ public class Logic1 {
 //        System.out.println(old35(10));
 //        System.out.println(less20(8));
 //        System.out.println(nearTen(19));
-        System.out.println(teenSum(13, 2));
+//        System.out.println(teenSum(13, 2));
+        System.out.println(answerCell(true, false, false));
+    }
+
+    static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        return !isAsleep && (!isMorning || isMom);
     }
 
     static int teenSum(int a, int b) {
