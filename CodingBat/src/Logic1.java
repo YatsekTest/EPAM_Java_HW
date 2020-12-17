@@ -11,7 +11,12 @@ public class Logic1 {
 //        System.out.println(in1To10(11, true));
 //        System.out.println(specialEleven(22));
 //        System.out.println(more20(43));
-        System.out.println(old35(10));
+//        System.out.println(old35(10));
+        System.out.println(less20(8));
+    }
+
+    static boolean less20(int n) {
+        return n > 17 && ((n % 20 + 1) % 10 == 0 || (n % 20 + 2) % 10 == 0);
     }
 
     static boolean old35(int n) {
