@@ -12,7 +12,12 @@ public class Logic1 {
 //        System.out.println(specialEleven(22));
 //        System.out.println(more20(43));
 //        System.out.println(old35(10));
-        System.out.println(less20(8));
+//        System.out.println(less20(8));
+        System.out.println(nearTen(19));
+    }
+
+    static boolean nearTen(int num) {
+        return (num % 10 >= 0 && num % 10 <= 2) || (num % 10 > 7);
     }
 
     static boolean less20(int n) {
