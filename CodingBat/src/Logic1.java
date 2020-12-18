@@ -16,7 +16,19 @@ public class Logic1 {
 //        System.out.println(nearTen(19));
 //        System.out.println(teenSum(13, 2));
 //        System.out.println(answerCell(true, false, false));
-        System.out.println(teaParty(6, 8));
+//        System.out.println(teaParty(6, 8));
+        System.out.println(fizzString("mili"));
+    }
+
+    static String fizzString(String str) {
+        char first = str.charAt(0);                         // boolean f = str.startsWith("f");
+        char last = str.charAt(str.length() - 1);           // boolean b = str.endsWith("b");
+        boolean isFizz = first == 'f';                      // Правильнее будет воспользоваться методами
+        boolean isBuzz = last == 'b';                       // startsWith and endsWith в остальном решение совпадает.
+        if(isFizz && isBuzz) return "FizzBuzz";
+        else if(isFizz) return "Fizz";
+        else if(isBuzz) return "Buzz";
+        return str;
     }
 
     static int teaParty(int tea, int candy) {
