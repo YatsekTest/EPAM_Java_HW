@@ -15,7 +15,14 @@ public class Logic1 {
 //        System.out.println(less20(8));
 //        System.out.println(nearTen(19));
 //        System.out.println(teenSum(13, 2));
-        System.out.println(answerCell(true, false, false));
+//        System.out.println(answerCell(true, false, false));
+        System.out.println(teaParty(6, 8));
+    }
+
+    static int teaParty(int tea, int candy) {
+        if (tea < 5 || candy < 5) return 0;
+        else if (tea / 2 >= candy || candy / 2 >= tea) return 2;
+        else return 1;
     }
 
     static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
@@ -24,7 +31,7 @@ public class Logic1 {
 
     static int teenSum(int a, int b) {
         int sum = a + b;
-        if((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) return 19;
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) return 19;
         return sum;
     }
 
