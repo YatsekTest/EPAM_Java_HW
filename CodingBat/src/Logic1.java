@@ -18,8 +18,11 @@ public class Logic1 {
 //        System.out.println(answerCell(true, false, false));
 //        System.out.println(teaParty(6, 8));
 //        System.out.println(fizzString("mili"));
-        System.out.println(fizzString2(15));
+//        System.out.println(fizzString2(15));
+
     }
+
+
 
     static String fizzString2(int n) {
         if(n % 3 == 0 && n % 5 == 0) return "FizzBuzz!";
@@ -60,7 +63,8 @@ public class Logic1 {
     }
 
     static boolean less20(int n) {
-        return n > 17 && ((n % 20 + 1) % 10 == 0 || (n % 20 + 2) % 10 == 0);
+//        return n > 17 && ((n % 20 + 1) % 10 == 0 || (n % 20 + 2) % 10 == 0); // Моё совсем не оптимальное решение :))
+        return (n % 20 == 18) || (n % 20 == 19);
     }
 
     static boolean old35(int n) {
