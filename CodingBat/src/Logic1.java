@@ -23,7 +23,13 @@ public class Logic1 {
 //        System.out.println(inOrder(1, 1, 2, true));
 //        System.out.println(inOrderEqual(5, 5, 5, true));
 //        System.out.println(lastDigit(23, 19, 3));
-        System.out.println(lessBy10(11, 1, 7));
+//        System.out.println(lessBy10(11, 1, 7));
+        System.out.println(withoutDoubles(3, 3, false));
+    }
+
+    static int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if (noDoubles && die1 == die2) die1 = die1 == 6 ? 1 : ++die1;
+        return die1 + die2;
     }
 
     static boolean lessBy10(int a, int b, int c) {
