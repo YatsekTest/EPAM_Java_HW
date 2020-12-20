@@ -19,7 +19,13 @@ public class Logic1 {
 //        System.out.println(teaParty(6, 8));
 //        System.out.println(fizzString("mili"));
 //        System.out.println(fizzString2(15));
-        System.out.println(twoAsOne(3, 2, 2));
+//        System.out.println(twoAsOne(3, 2, 2));
+        System.out.println(inOrder(1, 1, 2, true));
+    }
+
+    static boolean inOrder(int a, int b, int c, boolean bOk) {
+        if(!bOk) return b > a && c > b;
+        else return c > b;
     }
 
     static boolean twoAsOne(int a, int b, int c) {
