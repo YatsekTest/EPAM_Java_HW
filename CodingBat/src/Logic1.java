@@ -19,10 +19,12 @@ public class Logic1 {
 //        System.out.println(teaParty(6, 8));
 //        System.out.println(fizzString("mili"));
 //        System.out.println(fizzString2(15));
-
+        System.out.println(twoAsOne(3, 2, 2));
     }
 
-
+    static boolean twoAsOne(int a, int b, int c) {
+        return a + b == c || a + c == b || b + c == a;
+    }
 
     static String fizzString2(int n) {
         if(n % 3 == 0 && n % 5 == 0) return "FizzBuzz!";
