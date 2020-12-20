@@ -22,7 +22,13 @@ public class Logic1 {
 //        System.out.println(twoAsOne(3, 2, 2));
 //        System.out.println(inOrder(1, 1, 2, true));
 //        System.out.println(inOrderEqual(5, 5, 5, true));
-        System.out.println(lastDigit(23, 19, 3));
+//        System.out.println(lastDigit(23, 19, 3));
+        System.out.println(lessBy10(11, 1, 7));
+    }
+
+    static boolean lessBy10(int a, int b, int c) {
+//       return a - b >= 10 || a - c >= 10 || b - a >= 10 || b - c >= 10 || c - a >= 10 || c - b >= 10;
+       return Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(a - c) >= 10;
     }
 
     static boolean lastDigit(int a, int b, int c) {
