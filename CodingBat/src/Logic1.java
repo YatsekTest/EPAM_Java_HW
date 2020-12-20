@@ -21,7 +21,12 @@ public class Logic1 {
 //        System.out.println(fizzString2(15));
 //        System.out.println(twoAsOne(3, 2, 2));
 //        System.out.println(inOrder(1, 1, 2, true));
-        System.out.println(inOrderEqual(5, 5, 5, true));
+//        System.out.println(inOrderEqual(5, 5, 5, true));
+        System.out.println(lastDigit(23, 19, 3));
+    }
+
+    static boolean lastDigit(int a, int b, int c) {
+       return a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10;
     }
 
     static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
