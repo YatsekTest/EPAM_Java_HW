@@ -30,7 +30,7 @@ public class Logic1 {
 //        System.out.println(greenTicket(1, 1, 2));
 //        System.out.println(blueTicket(10, 2, 1));
 //        System.out.println(shareDigit(12, 44));
-        System.out.println(sumLimit(8, 1));
+//        System.out.println(sumLimit(8, 1));
     }
 
     static int sumLimit(int a, int b) {
