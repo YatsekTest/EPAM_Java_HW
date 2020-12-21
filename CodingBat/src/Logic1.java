@@ -26,7 +26,14 @@ public class Logic1 {
 //        System.out.println(lessBy10(11, 1, 7));
 //        System.out.println(withoutDoubles(3, 3, false));
 //        System.out.println(maxMod5(5, 15));
-        System.out.println(redTicket(0, 0, 0));
+//        System.out.println(redTicket(0, 0, 0));
+        System.out.println(greenTicket(1, 1, 2));
+    }
+
+    static int greenTicket(int a, int b, int c) {
+        if(a == b && b == c) return 20;
+        else if(a == b || a == c || b == c) return 10;
+        else return 0;
     }
 
     static int redTicket(int a, int b, int c) {
