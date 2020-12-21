@@ -24,7 +24,14 @@ public class Logic1 {
 //        System.out.println(inOrderEqual(5, 5, 5, true));
 //        System.out.println(lastDigit(23, 19, 3));
 //        System.out.println(lessBy10(11, 1, 7));
-        System.out.println(withoutDoubles(3, 3, false));
+//        System.out.println(withoutDoubles(3, 3, false));
+        System.out.println(maxMod5(5, 15));
+    }
+
+    static int maxMod5(int a, int b) {
+       if(a == b) return 0;
+       else  if (a % 5 == b % 5) return a < b ? a : b;
+       return Math.max(a, b);
     }
 
     static int withoutDoubles(int die1, int die2, boolean noDoubles) {
@@ -34,20 +41,20 @@ public class Logic1 {
 
     static boolean lessBy10(int a, int b, int c) {
 //       return a - b >= 10 || a - c >= 10 || b - a >= 10 || b - c >= 10 || c - a >= 10 || c - b >= 10;
-       return Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(a - c) >= 10;
+        return Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(a - c) >= 10;
     }
 
     static boolean lastDigit(int a, int b, int c) {
-       return a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10;
+        return a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10;
     }
 
     static boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-        if(!equalOk) return a < b && b < c;
+        if (!equalOk) return a < b && b < c;
         else return a <= b && b <= c;
     }
 
     static boolean inOrder(int a, int b, int c, boolean bOk) {
-        if(!bOk) return b > a && c > b;
+        if (!bOk) return b > a && c > b;
         else return c > b;
     }
 
@@ -56,9 +63,9 @@ public class Logic1 {
     }
 
     static String fizzString2(int n) {
-        if(n % 3 == 0 && n % 5 == 0) return "FizzBuzz!";
-        else if(n % 3 == 0) return "Fizz!";
-        else if(n % 5 == 0) return "Buzz!";
+        if (n % 3 == 0 && n % 5 == 0) return "FizzBuzz!";
+        else if (n % 3 == 0) return "Fizz!";
+        else if (n % 5 == 0) return "Buzz!";
         return n + "!";
     }
 
@@ -67,9 +74,9 @@ public class Logic1 {
         char last = str.charAt(str.length() - 1);           // boolean b = str.endsWith("b");
         boolean isFizz = first == 'f';                      // Правильнее будет воспользоваться методами
         boolean isBuzz = last == 'b';                       // startsWith and endsWith в остальном решение совпадает.
-        if(isFizz && isBuzz) return "FizzBuzz";
-        else if(isFizz) return "Fizz";
-        else if(isBuzz) return "Buzz";
+        if (isFizz && isBuzz) return "FizzBuzz";
+        else if (isFizz) return "Fizz";
+        else if (isBuzz) return "Buzz";
         return str;
     }
 
