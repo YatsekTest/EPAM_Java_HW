@@ -28,7 +28,12 @@ public class Logic1 {
 //        System.out.println(maxMod5(5, 15));
 //        System.out.println(redTicket(0, 0, 0));
 //        System.out.println(greenTicket(1, 1, 2));
-        System.out.println(blueTicket(10, 2, 1));
+//        System.out.println(blueTicket(10, 2, 1));
+        System.out.println(shareDigit(12, 44));
+    }
+
+    static boolean shareDigit(int a, int b) {
+        return a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10;
     }
 
     static int blueTicket(int a, int b, int c) {
