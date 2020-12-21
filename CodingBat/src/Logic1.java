@@ -25,12 +25,20 @@ public class Logic1 {
 //        System.out.println(lastDigit(23, 19, 3));
 //        System.out.println(lessBy10(11, 1, 7));
 //        System.out.println(withoutDoubles(3, 3, false));
-        System.out.println(maxMod5(5, 15));
+//        System.out.println(maxMod5(5, 15));
+        System.out.println(redTicket(0, 0, 0));
+    }
+
+    static int redTicket(int a, int b, int c) {
+        if(a == 2 && b == 2 && c == 2) return 10;
+        else if (a == b && a == c) return 5;
+        else if (b != a && c != a) return 1;
+        return 0;
     }
 
     static int maxMod5(int a, int b) {
        if(a == b) return 0;
-       else  if (a % 5 == b % 5) return a < b ? a : b;
+       else  if (a % 5 == b % 5) return Math.min(a, b);
        return Math.max(a, b);
     }
 
