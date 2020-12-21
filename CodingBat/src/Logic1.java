@@ -27,26 +27,36 @@ public class Logic1 {
 //        System.out.println(withoutDoubles(3, 3, false));
 //        System.out.println(maxMod5(5, 15));
 //        System.out.println(redTicket(0, 0, 0));
-        System.out.println(greenTicket(1, 1, 2));
+//        System.out.println(greenTicket(1, 1, 2));
+        System.out.println(blueTicket(10, 2, 1));
+    }
+
+    static int blueTicket(int a, int b, int c) {
+        int ab = a + b;
+        int bc = b + c;
+        int ac = a + c;
+        if (ab == 10 || bc == 10 || ac == 10) return 10;
+        else if (ab - 10 == bc || ab - 10 == ac) return 5;
+        else return 0;
     }
 
     static int greenTicket(int a, int b, int c) {
-        if(a == b && b == c) return 20;
-        else if(a == b || a == c || b == c) return 10;
+        if (a == b && b == c) return 20;
+        else if (a == b || a == c || b == c) return 10;
         else return 0;
     }
 
     static int redTicket(int a, int b, int c) {
-        if(a == 2 && b == 2 && c == 2) return 10;
+        if (a == 2 && b == 2 && c == 2) return 10;
         else if (a == b && a == c) return 5;
         else if (b != a && c != a) return 1;
         return 0;
     }
 
     static int maxMod5(int a, int b) {
-       if(a == b) return 0;
-       else  if (a % 5 == b % 5) return Math.min(a, b);
-       return Math.max(a, b);
+        if (a == b) return 0;
+        else if (a % 5 == b % 5) return Math.min(a, b);
+        return Math.max(a, b);
     }
 
     static int withoutDoubles(int die1, int die2, boolean noDoubles) {
