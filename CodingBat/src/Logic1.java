@@ -29,7 +29,14 @@ public class Logic1 {
 //        System.out.println(redTicket(0, 0, 0));
 //        System.out.println(greenTicket(1, 1, 2));
 //        System.out.println(blueTicket(10, 2, 1));
-        System.out.println(shareDigit(12, 44));
+//        System.out.println(shareDigit(12, 44));
+        System.out.println(sumLimit(8, 1));
+    }
+
+    static int sumLimit(int a, int b) {
+       int sum = a + b;
+       if(String.valueOf(sum).length() == String.valueOf(a).length()) return sum;
+       return a;
     }
 
     static boolean shareDigit(int a, int b) {
