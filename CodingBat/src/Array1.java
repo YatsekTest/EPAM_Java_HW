@@ -4,6 +4,10 @@ public class Array1 {
 
     }
 
+    static int[] makeEnds(int[] nums) {
+        return new int[]{nums[0], nums[nums.length - 1]};
+    }
+
     static int[] middleWay(int[] a, int[] b) {
         return new int[]{a[1], b[1]};
     }
