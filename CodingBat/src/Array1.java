@@ -4,6 +4,10 @@ public class Array1 {
 
     }
 
+    static int[] middleWay(int[] a, int[] b) {
+        return new int[]{a[1], b[1]};
+    }
+
     static int sum2(int[] nums) {
         if (nums.length > 1) return nums[0] + nums[1];
         else if (nums.length == 1) return nums[0];
