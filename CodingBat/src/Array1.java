@@ -4,6 +4,10 @@ public class Array1 {
 
     }
 
+    static int sum3(int[] nums) {
+        return nums[0] + nums[1] + nums[2];
+    }
+
     static boolean commonEnd(int[] a, int[] b) {
         return a[0] == b[0] || a[a.length - 1] == b[b.length - 1];
     }
