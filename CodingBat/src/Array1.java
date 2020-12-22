@@ -4,6 +4,12 @@ public class Array1 {
 
     }
 
+    static int sum2(int[] nums) {
+        if (nums.length > 1) return nums[0] + nums[1];
+        else if (nums.length == 1) return nums[0];
+        return 0;
+    }
+
     static int[] maxEnd3(int[] nums) {
         int max = Math.max(nums[0], nums[2]);
         return new int[]{max, max, max};
