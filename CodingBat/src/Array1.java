@@ -4,6 +4,11 @@ public class Array1 {
 
     }
 
+    static int[] maxEnd3(int[] nums) {
+        int max = Math.max(nums[0], nums[2]);
+        return new int[]{max, max, max};
+    }
+
     static int[] reverse3(int[] nums) {
         return new int[]{nums[2], nums[1], nums[0]};
     }
