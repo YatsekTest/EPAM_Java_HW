@@ -4,6 +4,13 @@ public class Array1 {
 
     }
 
+    static int[] biggerTwo(int[] a, int[] b) {
+       int aSum = a[0] + a[1];
+       int bSum = b[0] + b[1];
+       if(aSum >= bSum) return a;
+       return b;
+    }
+
     static int start1(int[] a, int[] b) {
         if ((a.length > 0 && a[0] == 1) && (b.length > 0 && b[0] == 1)) return 2;
         else if ((a.length > 0 && a[0] == 1) || (b.length > 0 && b[0] == 1)) return 1;
