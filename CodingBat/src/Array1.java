@@ -4,8 +4,14 @@ public class Array1 {
 
     }
 
+    static int[] fix23(int[] nums) {
+        if (nums[0] == 2 && nums[1] == 3) return new int[]{nums[0], 0, nums[2]};
+        else if (nums[1] == 2 && nums[2] == 3) return new int[]{nums[0], nums[1], 0};
+        return nums;
+    }
+
     static boolean double23(int[] nums) {
-        if(nums.length > 1) return (nums[0] == 2 && nums[1] == 2) || (nums[0] == 3 && nums[1] == 3);
+        if (nums.length > 1) return (nums[0] == 2 && nums[1] == 2) || (nums[0] == 3 && nums[1] == 3);
         else return false;
     }
 
@@ -16,11 +22,11 @@ public class Array1 {
     }
 
     static boolean no23(int[] nums) {
-        return !(nums[0] == 2 ||  nums[0] == 3 || nums[1] == 2 || nums[1] == 3);
+        return !(nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3);
     }
 
     static boolean has23(int[] nums) {
-        return nums[0] == 2 ||  nums[0] == 3 || nums[1] == 2 || nums[1] == 3;
+        return nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3;
     }
 
     static int[] makeEnds(int[] nums) {
