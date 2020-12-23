@@ -4,11 +4,15 @@ public class Array1 {
 
     }
 
+    static int[] makeMiddle(int[] nums) {
+        return new int[]{nums[nums.length / 2 - 1], nums[nums.length / 2]};
+    }
+
     static int[] biggerTwo(int[] a, int[] b) {
-       int aSum = a[0] + a[1];
-       int bSum = b[0] + b[1];
-       if(aSum >= bSum) return a;
-       return b;
+        int aSum = a[0] + a[1];
+        int bSum = b[0] + b[1];
+        if (aSum >= bSum) return a;
+        return b;
     }
 
     static int start1(int[] a, int[] b) {
