@@ -4,6 +4,11 @@ public class Array1 {
 
     }
 
+    static int[] frontPiece(int[] nums) {
+//        if(nums.length <= 2) return nums;
+        return (nums.length <= 2) ? nums : new int[]{nums[0], nums[1]};
+    }
+
     static int maxTriple(int[] nums) {
         int first = nums[0];
         int middle = nums[nums.length / 2];
