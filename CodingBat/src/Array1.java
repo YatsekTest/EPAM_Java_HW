@@ -4,6 +4,10 @@ public class Array1 {
 
     }
 
+    static int[] midThree(int[] nums) {
+       return new int[]{nums[nums.length / 2 - 1], nums[nums.length / 2], nums[nums.length / 2 + 1]};
+    }
+
     static int[] swapEnds(int[] nums) {
         int temp = nums[0];
         nums[0] = nums[nums.length - 1];
