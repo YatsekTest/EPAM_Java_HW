@@ -4,6 +4,12 @@ public class Array1 {
 
     }
 
+    static int start1(int[] a, int[] b) {
+        if ((a.length > 0 && a[0] == 1) && (b.length > 0 && b[0] == 1)) return 2;
+        else if ((a.length > 0 && a[0] == 1) || (b.length > 0 && b[0] == 1)) return 1;
+        return 0;
+    }
+
     static int[] fix23(int[] nums) {
         if (nums[0] == 2 && nums[1] == 3) return new int[]{nums[0], 0, nums[2]};
         else if (nums[1] == 2 && nums[2] == 3) return new int[]{nums[0], nums[1], 0};
