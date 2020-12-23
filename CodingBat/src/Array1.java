@@ -4,6 +4,21 @@ public class Array1 {
 
     }
 
+    static int[] make2(int[] a, int[] b) { // Задача решена, тесты прошли, но есть сомнение в том, что решение оптимально...
+        int[] c = new int[2];
+        if(a.length >= 2) {
+            c[0] = a[0];
+            c[1]=a[1];
+        } else if (a.length == 1) {
+            c[0] = a[0];
+            c[1] = b[0];
+        } else {
+            c[0] = b[0];
+            c[1] = b[1];
+        }
+        return c;
+    }
+
     boolean unlucky1(int[] nums) { // Задача решена, тесты прошли, но есть сомнение в том, что решение оптимально...
         if (nums.length >= 2) return (nums[0] == 1 && nums[1] == 3) || (nums[1] == 1 && nums[2] == 3)
                 || (nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3);
