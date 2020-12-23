@@ -4,6 +4,10 @@ public class Array1 {
 
     }
 
+    static int[] plusTwo(int[] a, int[] b) {
+        return new int[]{a[0], a[1], b[0], b[1]};
+    }
+
     static int[] makeMiddle(int[] nums) {
         return new int[]{nums[nums.length / 2 - 1], nums[nums.length / 2]};
     }
