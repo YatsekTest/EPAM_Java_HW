@@ -4,6 +4,13 @@ public class Array1 {
 
     }
 
+    static int[] swapEnds(int[] nums) {
+        int temp = nums[0];
+        nums[0] = nums[nums.length - 1];
+        nums[nums.length - 1] = temp;
+        return nums;
+    }
+
     static int[] plusTwo(int[] a, int[] b) {
         return new int[]{a[0], a[1], b[0], b[1]};
     }
