@@ -4,8 +4,17 @@ public class Array1 {
 
     }
 
+    static int maxTriple(int[] nums) {
+        int first = nums[0];
+        int middle = nums[nums.length / 2];
+        int last = nums[nums.length - 1];
+        if(middle > first && middle > last) return middle;
+        else if(last > first && last > middle) return last;
+        return first;
+    }
+
     static int[] midThree(int[] nums) {
-       return new int[]{nums[nums.length / 2 - 1], nums[nums.length / 2], nums[nums.length / 2 + 1]};
+        return new int[]{nums[nums.length / 2 - 1], nums[nums.length / 2], nums[nums.length / 2 + 1]};
     }
 
     static int[] swapEnds(int[] nums) {
