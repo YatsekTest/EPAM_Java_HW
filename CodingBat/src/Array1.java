@@ -4,6 +4,12 @@ public class Array1 {
 
     }
 
+    boolean unlucky1(int[] nums) { // Задача решена, тесты прошли, но есть сомнение в том, что решение оптимально...
+        if (nums.length >= 2) return (nums[0] == 1 && nums[1] == 3) || (nums[1] == 1 && nums[2] == 3)
+                || (nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3);
+        return false;
+    }
+
     static int[] frontPiece(int[] nums) {
 //        if(nums.length <= 2) return nums;
         return (nums.length <= 2) ? nums : new int[]{nums[0], nums[1]};
@@ -13,8 +19,8 @@ public class Array1 {
         int first = nums[0];
         int middle = nums[nums.length / 2];
         int last = nums[nums.length - 1];
-        if(middle > first && middle > last) return middle;
-        else if(last > first && last > middle) return last;
+        if (middle > first && middle > last) return middle;
+        else if (last > first && last > middle) return last;
         return first;
     }
 
