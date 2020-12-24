@@ -2,7 +2,14 @@ public class Warmup2 {
     public static void main(String[] args) {
 //        System.out.println(stringTimes("Hi", 2));
 //        System.out.println(frontTimes("Chocolate", 5));
-        System.out.println(countXXX("xxxx"));
+//        System.out.println(countXXX("xxxx"));
+        System.out.println(doubleX("xaxxx"));
+    }
+
+    static boolean doubleX(String str) {
+        int index = str.indexOf("x");
+        if(index + 1 >= str.length() || index <0) return false;
+        return str.substring(index, index + 2).equals("xx");
     }
 
     static int countXXX(String str) {
