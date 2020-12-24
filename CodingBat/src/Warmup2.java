@@ -4,7 +4,16 @@ public class Warmup2 {
 //        System.out.println(frontTimes("Chocolate", 5));
 //        System.out.println(countXXX("xxxx"));
 //        System.out.println(doubleX("xaxxx"));
-        System.out.println(stringBits("Heeololeo"));
+//        System.out.println(stringBits("Heeololeo"));
+        System.out.println(stringSplosion("Code"));
+    }
+
+    static String stringSplosion(String str) {
+        String newStr = "";
+        for (int i = 0; i < str.length(); i++) {
+            newStr += str.substring(0, i + 1);
+        }
+        return newStr;
     }
 
     static String stringBits(String str) {
@@ -17,7 +26,7 @@ public class Warmup2 {
 
     static boolean doubleX(String str) {
         int index = str.indexOf("x");
-        if(index + 1 >= str.length() || index <0) return false;
+        if (index + 1 >= str.length() || index < 0) return false;
         return str.startsWith("xx", index);
     }
 
