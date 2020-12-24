@@ -3,13 +3,22 @@ public class Warmup2 {
 //        System.out.println(stringTimes("Hi", 2));
 //        System.out.println(frontTimes("Chocolate", 5));
 //        System.out.println(countXXX("xxxx"));
-        System.out.println(doubleX("xaxxx"));
+//        System.out.println(doubleX("xaxxx"));
+        System.out.println(stringBits("Heeololeo"));
+    }
+
+    static String stringBits(String str) {
+        String newStr = "";
+        for (int i = 0; i < str.length(); i += 2) {
+            newStr += String.valueOf(str.charAt(i));
+        }
+        return newStr;
     }
 
     static boolean doubleX(String str) {
         int index = str.indexOf("x");
         if(index + 1 >= str.length() || index <0) return false;
-        return str.substring(index, index + 2).equals("xx");
+        return str.startsWith("xx", index);
     }
 
     static int countXXX(String str) {
