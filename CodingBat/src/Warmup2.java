@@ -8,7 +8,17 @@ public class Warmup2 {
 //        System.out.println(stringSplosion("Code"));
 //        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
 //        System.out.println(arrayFront9(new int[]{1, 2, 3, 9, 4}));
-        System.out.println(stringX("abxxxcd"));
+//        System.out.println(stringX("abxxxcd"));
+    }
+
+    static String altPairs(String str) {
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < str.length(); i += 4) {
+            int end = i + 2;
+            if(end > str.length()) end = str.length();
+            newStr.append(str.substring(i, end));
+        }
+        return newStr.toString();
     }
 
     static String stringX(String str) {
