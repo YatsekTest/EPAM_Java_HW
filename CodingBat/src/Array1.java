@@ -4,6 +4,13 @@ public class Array1 {
 
     }
 
+    static int[] front11(int[] a, int[] b) {
+        if(a.length == 0 && b.length== 0) return a;
+        else if(a.length > 0 && b.length > 0) return new int[]{a[0], b[0]};
+        else if(a.length == 0) return new int[]{b[0]};
+        else return new int[]{a[0]};
+    }
+
     static int[] make2(int[] a, int[] b) { // Задача решена, тесты прошли, но есть сомнение в том, что решение оптимально...
         int[] c = new int[2];
         if(a.length >= 2) {
