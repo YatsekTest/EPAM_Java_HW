@@ -11,6 +11,14 @@ public class Warmup2 {
 //        System.out.println(stringX("abxxxcd"));
     }
 
+    static boolean noTriples(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if(nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) count++;
+        }
+        return count == 0;
+    }
+
     static int array667(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length - 1; i++) {
