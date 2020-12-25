@@ -7,7 +7,15 @@ public class Warmup2 {
 //        System.out.println(stringBits("Heeololeo"));
 //        System.out.println(stringSplosion("Code"));
 //        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
-        System.out.println(arrayFront9(new int[]{1, 2, 3, 9, 4}));
+//        System.out.println(arrayFront9(new int[]{1, 2, 3, 9, 4}));
+
+    }
+
+    static boolean array123(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) return true;
+        }
+        return false;
     }
 
     static boolean arrayFront9(int[] nums) {
