@@ -6,6 +6,15 @@ public class Warmup2 {
 //        System.out.println(doubleX("xaxxx"));
 //        System.out.println(stringBits("Heeololeo"));
 //        System.out.println(stringSplosion("Code"));
+        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
+    }
+
+    static int arrayCount(int[] nums) {
+        int count = 0;
+        for (int num : nums) {
+            if (num == 9) count++;
+        }
+        return count;
     }
 
     static int last2(String str) {
