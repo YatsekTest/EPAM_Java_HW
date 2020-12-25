@@ -8,13 +8,32 @@ public class Warmup2 {
 //        System.out.println(stringSplosion("Code"));
 //        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
 //        System.out.println(arrayFront9(new int[]{1, 2, 3, 9, 4}));
+        System.out.println(stringX("abxxxcd"));
+    }
 
+    static String stringX(String str) {
+        String newStr = "";
+        String first = "";
+        String last = "";
+        if (str.length() > 1) first = String.valueOf(str.charAt(0));
+        for (int i = 1; i < str.length() - 1; i++) if (!(str.charAt(i) == 'x')) newStr += str.charAt(i);
+        if (str.length() > 0) last = String.valueOf(str.charAt(str.length() - 1));
+        return first + newStr + last;
+//        On site solution:
+//        String result = "";
+//        for (int i = 0; i < str.length(); i++) {
+//            // Only append the char if it is not the "x" case
+//            if (!(i > 0 && i < (str.length() - 1) && str.substring(i, i + 1).equals("x"))) {
+//                result = result + str.substring(i, i + 1); // Could use str.charAt(i) here
+//            }
+//        }
+//        return result;
     }
 
     static int stringMatch(String a, String b) {
         int count = 0;
         for (int i = 0; i < a.length() - 1 && i < b.length() - 1; i++) {
-            if(a.substring(i, i + 2).equals(b.substring(i, i + 2))) count++;
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) count++;
         }
         return count;
     }
