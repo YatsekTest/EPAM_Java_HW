@@ -12,12 +12,15 @@ public class Warmup2 {
     }
 
     static boolean has271(int[] nums) {
-
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] + 5 == nums[i + 1] && Math.abs(nums[i + 2] - (nums[i] - 1)) <= 2) return true;
+        }
+        return false;
     }
 
     static boolean noTriples(int[] nums) {
         for (int i = 0; i < nums.length - 2; i++) {
-            if(nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) return false;
+            if (nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) return false;
         }
         return true;
     }
@@ -25,7 +28,7 @@ public class Warmup2 {
     static int array667(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length - 1; i++) {
-            if(nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) count++;
+            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) count++;
         }
         return count;
     }
