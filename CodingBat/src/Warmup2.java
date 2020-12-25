@@ -11,11 +11,26 @@ public class Warmup2 {
 //        System.out.println(stringX("abxxxcd"));
     }
 
+    static String stringYak(String str) {
+        return str.replace("yak", "");
+//        Решение приведённое на сайте:
+//        String result = "";
+//        for (int i = 0; i < str.length(); i++) {
+//            // Look for i starting a "yak" -- advance i in that case
+//            if (i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k') {
+//                i = i + 2;
+//            } else { // Otherwise do the normal append
+//                result = result + str.charAt(i);
+//            }
+//        }
+//        return result;
+    }
+
     static String altPairs(String str) {
         StringBuilder newStr = new StringBuilder();
         for (int i = 0; i < str.length(); i += 4) {
             int end = i + 2;
-            if(end > str.length()) end = str.length();
+            if (end > str.length()) end = str.length();
             newStr.append(str.substring(i, end));
         }
         return newStr.toString();
