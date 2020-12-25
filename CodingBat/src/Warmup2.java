@@ -6,7 +6,13 @@ public class Warmup2 {
 //        System.out.println(doubleX("xaxxx"));
 //        System.out.println(stringBits("Heeololeo"));
 //        System.out.println(stringSplosion("Code"));
-        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
+//        System.out.println(arrayCount(new int[]{1, 9, 9, 3, 9}));
+        System.out.println(arrayFront9(new int[]{1, 2, 3, 9, 4}));
+    }
+
+    static boolean arrayFront9(int[] nums) {
+        for (int i = 0; i < nums.length && i < 4; i++) if (nums[i] == 9) return true;
+        return false;
     }
 
     static int arrayCount(int[] nums) {
