@@ -3,6 +3,11 @@ public class Logic2 {
 
     }
 
+    static boolean closeFar(int a, int b, int c) {
+        if(Math.abs(b - a) <= 1 && Math.abs(c - a) > 1 && Math.abs(c - b) > 1) return true;
+        return Math.abs(c - a) <= 1 && Math.abs(b - a) > 1 && Math.abs(b - c) > 1;
+    }
+
     static int roundSum(int a, int b, int c) {
        return round10(a) + round10(b) + round10(c);
     }
