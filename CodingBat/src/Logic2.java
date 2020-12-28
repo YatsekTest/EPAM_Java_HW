@@ -3,6 +3,10 @@ public class Logic2 {
         System.out.println(19 % 21);
     }
 
+    static boolean evenlySpaced(int a, int b, int c) {
+        return b - a  == c - b || b - a == a - c || a - c == c - b;
+    }
+
     static int blackjack(int a, int b) {
         if(a > 21 && b > 21) return 0;
         if(b > 21) return a;
