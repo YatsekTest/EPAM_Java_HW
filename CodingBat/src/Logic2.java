@@ -1,6 +1,14 @@
 public class Logic2 {
     public static void main(String[] args) {
+        System.out.println(19 % 21);
+    }
 
+    static int blackjack(int a, int b) {
+        if(a > 21 && b > 21) return 0;
+        if(b > 21) return a;
+        if(a > 21) return b;
+        if(21 - a < 21 - b) return a;
+        else return b;
     }
 
     static boolean closeFar(int a, int b, int c) {
