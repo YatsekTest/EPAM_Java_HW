@@ -3,6 +3,14 @@ public class Logic2 {
 
     }
 
+    static int loneSum(int a, int b, int c) {
+       if(a == b && a == c) return 0;
+       if(a == b) return c;
+       if(a == c) return b;
+       if(b == c) return a;
+       return a + b + c;
+    }
+
     static boolean makeBricks(int small, int big, int goal) {
         return goal <= big * 5 + small && goal % 5 <= small;
     }
