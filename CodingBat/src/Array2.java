@@ -1,6 +1,14 @@
 public class Array2 {
     public static void main(String[] args) {
+        System.out.println(bigDiff(new int[]{10, 3, 5, 6}));
+    }
 
+    static int bigDiff(int[] nums) {
+        int max = nums[0];
+        int min = nums[0];
+        for (int num : nums) max = Math.max(max, num);
+        for (int num : nums) min = Math.min(min, num);
+        return max - min;
     }
 
     static int countEvens(int[] nums) {
