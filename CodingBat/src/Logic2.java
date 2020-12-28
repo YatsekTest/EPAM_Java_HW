@@ -3,6 +3,15 @@ public class Logic2 {
 
     }
 
+    static int noTeenSum(int a, int b, int c) {
+        return fixTeen(a) + fixTeen(b) + fixTeen(c);
+    }
+
+    static int fixTeen(int n) {
+        if (n >= 13 && n <= 19 && n != 15 && n != 16) return 0;
+        else return n;
+    }
+
     static int luckySum(int a, int b, int c) {
         if(a == 13) return 0;
         if(b == 13) return a;
