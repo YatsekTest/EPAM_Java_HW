@@ -5,6 +5,16 @@ public class Array2 {
 
     }
 
+    static boolean more14(int[] nums) {
+        int ones = 0;
+        int fours = 0;
+        for (int num : nums) {
+            if (num == 1) ones++;
+            if (num == 4) fours++;
+        }
+        return ones > fours;
+    }
+
     static boolean sum28(int[] nums) {
         int sum = 0;
         for (int num : nums) if (num == 2) sum += num;
