@@ -5,6 +5,12 @@ public class Array2 {
 
     }
 
+    static boolean sum28(int[] nums) {
+        int sum = 0;
+        for (int num : nums) if (num == 2) sum += num;
+        return sum == 8;
+    }
+
     static boolean lucky13(int[] nums) {
         for (int num : nums) if (num == 1 || num == 3) return false;
         return true;
