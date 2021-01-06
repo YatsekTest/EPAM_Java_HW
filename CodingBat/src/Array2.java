@@ -1,13 +1,32 @@
 public class Array2 {
     public static void main(String[] args) {
 //        System.out.println(bigDiff(new int[]{10, 3, 5, 6}));
+        System.out.println(sum67(new int[]{1, 2, 2, 6, 99, 99, 7}));
+    }
+
+    static int sum67(int[] nums) {
+        if (nums.length == 0) return 0;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 6) {
+                sum += nums[i];
+            } else {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (nums[j] == 7) {
+                        i = j;
+                        break;
+                    }
+                }
+            }
+        }
+        return sum;
     }
 
     static int sum13(int[] nums) {
-        if(nums.length == 0) return 0;
+        if (nums.length == 0) return 0;
         int sum = 0;
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] != 13) sum += nums[i];
+            if (nums[i] != 13) sum += nums[i];
             else i++;
         }
         return sum;
