@@ -3,6 +3,16 @@ public class Array2 {
 //        System.out.println(bigDiff(new int[]{10, 3, 5, 6}));
     }
 
+    static int sum13(int[] nums) {
+        if(nums.length == 0) return 0;
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] != 13) sum += nums[i];
+            else i++;
+        }
+        return sum;
+    }
+
     static int centeredAverage(int[] nums) {
         int largest = nums[0];
         int smallest = nums[0];
