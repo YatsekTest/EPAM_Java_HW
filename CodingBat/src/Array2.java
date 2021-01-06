@@ -5,6 +5,12 @@ public class Array2 {
 
     }
 
+    static int[] fizzArray(int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n - 1; i++) array[i + 1] = array[i] + 1;
+        return array;
+    }
+
     static boolean more14(int[] nums) {
         int ones = 0;
         int fours = 0;
