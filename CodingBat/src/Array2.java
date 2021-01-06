@@ -5,6 +5,11 @@ public class Array2 {
 
     }
 
+    static boolean only14(int[] nums) {
+        for (int num : nums) if (num != 1 && num != 4) return false;
+        return true;
+    }
+
     static int[] fizzArray(int n) {
         int[] array = new int[n];
         for (int i = 0; i < n - 1; i++) array[i + 1] = array[i] + 1;
