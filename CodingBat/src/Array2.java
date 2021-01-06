@@ -5,6 +5,12 @@ public class Array2 {
 
     }
 
+    static String[] fizzArray2(int n) {
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) array[i] = String.valueOf(i);
+        return array;
+    }
+
     static boolean only14(int[] nums) {
         for (int num : nums) if (num != 1 && num != 4) return false;
         return true;
