@@ -5,6 +5,11 @@ public class Array2 {
 
     }
 
+    static boolean lucky13(int[] nums) {
+        for (int num : nums) if (num == 1 || num == 3) return false;
+        return true;
+    }
+
     static boolean has22(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) if (nums[i] == 2 && nums[i + 1] == 2) return true;
         return false;
