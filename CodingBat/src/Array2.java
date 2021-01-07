@@ -5,6 +5,16 @@ public class Array2 {
 
     }
 
+    static boolean either24(int[] nums) {
+        boolean is22 = false;
+        boolean is44 = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) is22 = true;
+            if (nums[i] == 4 && nums[i + 1] == 4) is44 = true;
+        }
+        return is22 ^ is44;
+    }
+
     static boolean isEverywhere(int[] nums, int val) {
         // Решение подсмотрел в интернете. Как я понял, основано на доказательстве от противного:
         // если любые соседние элементы не будут заданным числом, условие "везде" выполняется.
