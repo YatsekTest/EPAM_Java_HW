@@ -5,10 +5,28 @@ public class Array2 {
 
     }
 
-    public int matchUp(int[] nums1, int[] nums2) {
+    static boolean has77(int[] nums) {
+        boolean sevenSeven = false;
+        boolean sevenNotSeven = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 7 && nums[i + 1] == 7) {
+                sevenSeven = true;
+                break;
+            }
+        }
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 7 && nums[i + 2] == 7) {
+                sevenNotSeven = true;
+                break;
+            }
+        }
+        return sevenSeven || sevenNotSeven;
+    }
+
+    static int matchUp(int[] nums1, int[] nums2) {
         int count = 0;
         for (int i = 0; i < nums1.length; i++) {
-            if(Math.abs(nums1[i] - nums2[i]) <= 2 && nums1[i] != nums2[i]) count++;
+            if (Math.abs(nums1[i] - nums2[i]) <= 2 && nums1[i] != nums2[i]) count++;
         }
         return count;
     }
