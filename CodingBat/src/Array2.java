@@ -5,6 +5,16 @@ public class Array2 {
 
     }
 
+    static boolean isEverywhere(int[] nums, int val) {
+        // Решение подсмотрел в интернете. Как я понял, основано на доказательстве от противного:
+        // если любые соседние элементы не будут заданным числом, условие "везде" выполняется.
+        // Т.е. если любые две пары это число, условие не выполнено и возвращаем false.
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] != val && nums[i + 1] != val) return false;
+        }
+        return true;
+    }
+
     static boolean no14(int[] nums) {
         for (int i : nums) {
             if (i == 1) {
