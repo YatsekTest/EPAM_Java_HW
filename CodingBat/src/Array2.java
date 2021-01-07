@@ -5,6 +5,21 @@ public class Array2 {
 
     }
 
+    static boolean no14(int[] nums) {
+        for (int i : nums) {
+            if (i == 1) {
+                for (int j : nums) {
+                    if (j == 4) return false;
+                }
+            } else if (i == 4) {
+                for (int k : nums) {
+                    if (k == 1) return false;
+                }
+            }
+        }
+        return true;
+    }
+
     static String[] fizzArray2(int n) {
         String[] array = new String[n];
         for (int i = 0; i < n; i++) array[i] = String.valueOf(i);
