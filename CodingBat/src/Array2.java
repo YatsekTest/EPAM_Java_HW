@@ -5,6 +5,16 @@ public class Array2 {
 
     }
 
+    static boolean modThree(int[] nums) {
+        boolean even = false;
+        boolean odd = false;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] % 2 == 0 && nums[i + 1] % 2 == 0 && nums[i + 2] % 2 == 0) even = true;
+            if (nums[i] % 2 != 0 && nums[i + 1] % 2 != 0 && nums[i + 2] % 2 != 0) odd = true;
+        }
+        return even || odd;
+    }
+
     static boolean has12(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 1) for (int j = i; j < nums.length; j++) {
