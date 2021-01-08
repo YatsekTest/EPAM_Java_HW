@@ -5,6 +5,21 @@ public class Array2 {
 
     }
 
+    static boolean haveThree(int[] nums) {
+        int countThree = 0;
+        boolean threeNot = true;
+        for (int num : nums) {
+            if (num == 3) countThree++;
+        }
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 3 && nums[i + 1] == 3) {
+                threeNot = false;
+                break;
+            }
+        }
+        return countThree == 3 && threeNot;
+    }
+
     static boolean modThree(int[] nums) {
         boolean even = false;
         boolean odd = false;
