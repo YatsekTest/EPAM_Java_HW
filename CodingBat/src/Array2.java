@@ -2,7 +2,14 @@ public class Array2 {
     public static void main(String[] args) {
 //        System.out.println(bigDiff(new int[]{10, 3, 5, 6}));
 //        System.out.println(sum67(new int[]{1, 2, 2, 6, 99, 99, 7}));
+        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
+    }
 
+    static boolean tripleUp(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] + 1 == nums[i + 1] && nums[i] + 2 == nums[i + 2]) return true;
+        }
+        return false;
     }
 
     static boolean sameEnds(int[] nums, int len) {
