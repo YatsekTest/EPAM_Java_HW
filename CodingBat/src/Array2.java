@@ -2,7 +2,15 @@ public class Array2 {
     public static void main(String[] args) {
 //        System.out.println(bigDiff(new int[]{10, 3, 5, 6}));
 //        System.out.println(sum67(new int[]{1, 2, 2, 6, 99, 99, 7}));
-        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
+//        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
+    }
+
+    static int[] fizzArray3(int start, int end) {
+        int[] array = new int[end - start];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = start + i;
+        }
+        return array;
     }
 
     static boolean tripleUp(int[] nums) {
