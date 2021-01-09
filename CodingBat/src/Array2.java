@@ -5,6 +5,21 @@ public class Array2 {
 //        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
     }
 
+    static int[] pre4(int[] nums) {
+        int length = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4) {
+                length = i;
+                break;
+            }
+        }
+        int[] array = new int[length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = nums[i];
+        }
+        return array;
+    }
+
     static int[] tenRun(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] % 10 == 0 && nums[i + 1] % 10 != 0) nums[i + 1] = nums[i];
