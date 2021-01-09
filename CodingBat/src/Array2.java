@@ -5,6 +5,16 @@ public class Array2 {
 //        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
     }
 
+    static int[] notAlone(int[] nums, int val) {
+        for (int i = 1; i < nums.length - 1; i++) {
+            if (nums[i] == val && nums[i + 1] != val && nums[i - 1] != val) {
+                if (nums[i - 1] <= nums[i + 1]) nums[i] = nums[i + 1];
+                else if (nums[i - 1] >= nums[i + 1]) nums[i] = nums[i - 1];
+            }
+        }
+        return nums;
+    }
+
     static int[] post4(int[] nums) {
         int length = 0;
         for (int i = nums.length - 1; i >= 0; i--) {
@@ -158,7 +168,7 @@ public class Array2 {
     static boolean isEverywhere(int[] nums, int val) {
         // Решение подсмотрел в интернете. Как я понял, основано на доказательстве от противного:
         // если любые соседние элементы не будут заданным числом, условие "везде" выполняется.
-        // Т.е. если любые две пары это число, условие не выполнено и возвращаем false.
+        // Т.е. если любые две пары это заданное число, условие не выполнено и возвращаем false.
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] != val && nums[i + 1] != val) return false;
         }
