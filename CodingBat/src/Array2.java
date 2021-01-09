@@ -5,6 +5,14 @@ public class Array2 {
 
     }
 
+    static boolean sameEnds(int[] nums, int len) {
+        int count = 0;
+        for (int i = 0; i < len; i++) {
+            if (nums[i] == nums[nums.length - len + i]) count++;
+        }
+        return count == len;
+    }
+
     static boolean twoTwo(int[] nums) {
         if (nums.length == 1 && nums[0] == 2) return false;
         if (nums.length >= 2 && ((nums[0] == 2 && nums[1] != 2) ||
