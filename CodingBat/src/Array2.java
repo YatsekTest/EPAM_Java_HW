@@ -5,6 +5,13 @@ public class Array2 {
 //        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
     }
 
+    static int[] tenRun(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] % 10 == 0 && nums[i + 1] % 10 != 0) nums[i + 1] = nums[i];
+        }
+        return nums;
+    }
+
     static int[] shiftLeft(int[] nums) {
         if (nums.length == 0) return nums;
         int first = nums[0];
