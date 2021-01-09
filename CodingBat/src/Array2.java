@@ -8,6 +8,20 @@ public class Array2 {
 //        System.out.println(Arrays.toString(zeroFront(new int[]{1, 0, 0, 1})));
     }
 
+    static int[] evenOdd(int[] nums) {
+        int[] array = new int[nums.length];
+        for (int i = 0, j = 0, k = 0; i < array.length; i++) {
+            if (nums[i] % 2 == 0) {
+                array[k] = nums[i];
+                k++;
+            } else {
+                array[array.length - 1 - j] = nums[i];
+                j++;
+            }
+        }
+        return array;
+    }
+
     static int[] zeroMax(int[] nums) {
         int max = 0;
         for (int i = 0; i < nums.length - 1; i++) {
