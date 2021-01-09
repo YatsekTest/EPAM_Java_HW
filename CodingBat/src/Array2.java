@@ -5,6 +5,16 @@ public class Array2 {
 //        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
     }
 
+    static int[] shiftLeft(int[] nums) {
+        if (nums.length == 0) return nums;
+        int first = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[i] = nums[i + 1];
+        }
+        nums[nums.length - 1] = first;
+        return nums;
+    }
+
     static int[] fizzArray3(int start, int end) {
         int[] array = new int[end - start];
         for (int i = 0; i < array.length; i++) {
