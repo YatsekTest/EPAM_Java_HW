@@ -8,6 +8,22 @@ public class Array2 {
 //        System.out.println(Arrays.toString(zeroFront(new int[]{1, 0, 0, 1})));
     }
 
+    static int[] zeroMax(int[] nums) {
+        int max = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 0) {
+                for (int j = i; j < nums.length; j++) {
+                    if (nums[j] != 0 && nums[j] % 2 == 1 && nums[j] >= max) {
+                        max = nums[j];
+                    }
+                }
+                nums[i] = max;
+                max = 0;
+            }
+        }
+        return nums;
+    }
+
     static int[] withoutTen(int[] nums) {
         int[] array = new int[nums.length];
         for (int i = 0, j = 0; i < array.length; i++) {
