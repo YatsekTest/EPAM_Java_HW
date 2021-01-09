@@ -6,6 +6,21 @@ public class Array2 {
 //        System.out.println(sum67(new int[]{1, 2, 2, 6, 99, 99, 7}));
 //        System.out.println(tripleUp(new int[]{1, 4, 5, 6, 2}));
 //        System.out.println(Arrays.toString(zeroFront(new int[]{1, 0, 0, 1})));
+        System.out.println(Arrays.toString(fizzBuzz(1, 16)));
+    }
+
+    static String[] fizzBuzz(int start, int end) {
+        int length = end - start;
+        int[] intArray = new int[length];
+        String[] stringArray = new String[length];
+        for (int i = 0; i < length; i++) intArray[i] = start + i;
+        for (int i = 0; i < length; i++) {
+            if (intArray[i] % 3 == 0 && intArray[i] % 5 == 0) stringArray[i] = "FizzBuzz";
+            else if (intArray[i] % 3 == 0) stringArray[i] = "Fizz";
+            else if (intArray[i] % 5 == 0) stringArray[i] = "Buzz";
+            else stringArray[i] = String.valueOf(intArray[i]);
+        }
+        return stringArray;
     }
 
     static int[] evenOdd(int[] nums) {
