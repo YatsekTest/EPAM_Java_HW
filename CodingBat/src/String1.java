@@ -1,6 +1,12 @@
+
 public class String1 {
     public static void main(String[] args) {
 
+    }
+
+    static String extraEnd(String str) {
+        String substring = str.substring(str.length() - 2);
+        return String.format("%s%s%s", substring, substring, substring);
     }
 
     static String makeOutWord(String out, String word) {
