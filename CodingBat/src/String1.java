@@ -4,6 +4,11 @@ public class String1 {
 
     }
 
+    static String middleTwo(String str) {
+        if (str.length() <= 3) return str;
+        return str.charAt(str.length() / 2 - 1) + "" + str.charAt(str.length() / 2);
+    }
+
     static String withoutEnd2(String str) {
         if (str.length() <= 2) return "";
         return str.substring(1, str.length() - 1);
