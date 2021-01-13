@@ -4,6 +4,11 @@ public class String1 {
 
     }
 
+    static boolean endsLy(String str) {
+        if (str.length() >= 2) return str.endsWith("ly");
+        else return false;
+    }
+
     static String middleTwo(String str) {
         if (str.length() <= 3) return str;
         return str.charAt(str.length() / 2 - 1) + "" + str.charAt(str.length() / 2);
