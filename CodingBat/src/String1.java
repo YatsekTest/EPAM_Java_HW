@@ -4,6 +4,11 @@ public class String1 {
 
     }
 
+    static String firstTwo(String str) {
+        if (str.length() <= 2) return str;
+        return str.substring(0, 2);
+    }
+
     static String extraEnd(String str) {
         String substring = str.substring(str.length() - 2);
         return String.format("%s%s%s", substring, substring, substring);
