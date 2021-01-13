@@ -4,6 +4,10 @@ public class String1 {
 
     }
 
+    static String withoutEnd(String str) {
+        return str.substring(1, str.length() - 1);
+    }
+
     static String firstHalf(String str) {
         return str.substring(0, str.length() / 2);
     }
