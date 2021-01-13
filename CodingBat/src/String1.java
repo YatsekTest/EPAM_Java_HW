@@ -4,6 +4,10 @@ public class String1 {
 
     }
 
+    static String firstHalf(String str) {
+        return str.substring(0, str.length() / 2);
+    }
+
     static String firstTwo(String str) {
         if (str.length() <= 2) return str;
         return str.substring(0, 2);
