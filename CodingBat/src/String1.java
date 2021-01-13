@@ -4,6 +4,10 @@ public class String1 {
 
     }
 
+    static String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
+    }
+
     static String right2(String str) {
         return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
     }
