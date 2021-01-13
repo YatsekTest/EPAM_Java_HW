@@ -4,6 +4,10 @@ public class String1 {
 
     }
 
+    static String comboString(String a, String b) {
+        return a.length() < b.length() ? a + b + a : b + a + b;
+    }
+
     static String withoutEnd(String str) {
         return str.substring(1, str.length() - 1);
     }
