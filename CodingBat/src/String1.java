@@ -4,6 +4,10 @@ public class String1 {
 
     }
 
+    static String left2(String str) {
+        return str.substring(2) + str.substring(0, 2);
+    }
+
     static String nonStart(String a, String b) {
         return a.substring(1) + b.substring(1);
     }
