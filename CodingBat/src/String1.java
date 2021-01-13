@@ -3,6 +3,10 @@ public class String1 {
 
     }
 
+    static String makeTags(String tag, String word) {
+        return String.format("<%s>%s</%s>", tag, word, tag);
+    }
+
     static String makeAbba(String a, String b) {
         return a + b + b + a;
     }
