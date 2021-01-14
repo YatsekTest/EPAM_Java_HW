@@ -4,6 +4,13 @@ public class String1 {
 
     }
 
+    static String atFirst(String str) {
+        if (str.length() == 0) return "@@";
+        if (str.length() == 1) return str.charAt(0) + "@";
+        if (str.length() == 2) return str;
+        return str.substring(0, 2);
+    }
+
     static boolean hasBad(String str) {
         if (str.length() < 3) return false;
         if (str.length() == 3) return str.equals("bad");
