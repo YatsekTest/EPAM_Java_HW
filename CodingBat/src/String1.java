@@ -4,6 +4,13 @@ public class String1 {
 
     }
 
+    static String conCat(String a, String b) {
+        if (a.length() == 0 || b.length() == 0) return a + b;
+        String first = b.substring(0, 1);
+        if (a.endsWith(first)) return a + b.substring(1);
+        return a + b;
+    }
+
     static String lastChars(String a, String b) {
         if (a.length() == 0) a = "@";
         else a = a.substring(0, 1);
