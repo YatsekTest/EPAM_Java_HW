@@ -4,6 +4,12 @@ public class String1 {
 
     }
 
+    static String minCat(String a, String b) {
+        if (a.length() == b.length()) return a + b;
+        if (a.length() > b.length()) return a.substring(a.length() - b.length()) + b;
+        return a + b.substring(b.length() - a.length());
+    }
+
     static boolean frontAgain(String str) {
         if (str.length() < 2) return false;
         if (str.length() == 2) return true;
