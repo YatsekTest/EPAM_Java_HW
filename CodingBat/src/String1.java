@@ -4,6 +4,11 @@ public class String1 {
 
     }
 
+    static String middleThree(String str) {
+        if (str.length() <= 3) return str;
+        return str.charAt(str.length() / 2 - 1) + "" + str.charAt(str.length() / 2) + str.charAt(str.length() / 2 + 1);
+    }
+
     static String twoChar(String str, int index) {
         if (str.length() - index < 2 || index < 1) return str.substring(0, 2);
         return str.substring(index, index + 2);
