@@ -4,6 +4,12 @@ public class String1 {
 
     }
 
+    static boolean hasBad(String str) {
+        if (str.length() < 3) return false;
+        if (str.length() == 3) return str.equals("bad");
+        return str.startsWith("bad") || str.startsWith("bad", 1);
+    }
+
     static String middleThree(String str) {
         if (str.length() <= 3) return str;
         return str.charAt(str.length() / 2 - 1) + "" + str.charAt(str.length() / 2) + str.charAt(str.length() / 2 + 1);
