@@ -4,6 +4,12 @@ public class String1 {
 
     }
 
+    static String seeColor(String str) {
+        if (str.startsWith("red")) return "red";
+        if (str.startsWith("blue")) return "blue";
+        return "";
+    }
+
     static String lastTwo(String str) {
         if (str.length() >= 2)
             return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
