@@ -4,6 +4,13 @@ public class String1 {
 
     }
 
+    static boolean frontAgain(String str) {
+        if (str.length() < 2) return false;
+        if (str.length() == 2) return true;
+        String end = str.substring(str.length() - 2);
+        return str.startsWith(end);
+    }
+
     static String seeColor(String str) {
         if (str.startsWith("red")) return "red";
         if (str.startsWith("blue")) return "blue";
