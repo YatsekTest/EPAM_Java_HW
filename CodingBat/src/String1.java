@@ -4,6 +4,12 @@ public class String1 {
 
     }
 
+    static String lastTwo(String str) {
+        if (str.length() >= 2)
+            return str.substring(0, str.length() - 2) + str.charAt(str.length() - 1) + str.charAt(str.length() - 2);
+        else return str;
+    }
+
     static String conCat(String a, String b) {
         if (a.length() == 0 || b.length() == 0) return a + b;
         String first = b.substring(0, 1);
