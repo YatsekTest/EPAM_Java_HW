@@ -4,6 +4,14 @@ public class String1 {
 
     }
 
+    static String lastChars(String a, String b) {
+        if (a.length() == 0) a = "@";
+        else a = a.substring(0, 1);
+        if (b.length() == 0) b = "@";
+        else b = b.substring(b.length() - 1);
+        return a + b;
+    }
+
     static String atFirst(String str) {
         if (str.length() == 0) return "@@";
         if (str.length() == 1) return str.charAt(0) + "@";
