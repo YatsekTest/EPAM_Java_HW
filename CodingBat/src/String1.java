@@ -4,6 +4,14 @@ public class String1 {
 
     }
 
+    static String without2(String str) {
+        if (str.length() < 2) return str;
+        if (str.length() == 2) return "";
+        String end = str.substring(str.length() - 2);
+        if (str.startsWith(end)) return str.substring(2);
+        else return str;
+    }
+
     static String extraFront(String str) {
         if (str.length() <= 2) return str + str + str;
         String newStr = str.substring(0, 3);
