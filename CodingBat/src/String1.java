@@ -4,6 +4,30 @@ public class String1 {
 
     }
 
+    static String deFront(String str) {
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0 && str.charAt(i) == 'a') newStr.append(str.charAt(i));
+            if (i == 1 && str.charAt(i) == 'b') newStr.append(str.charAt(i));
+            if (i > 1) newStr.append(str.charAt(i));
+        }
+        return newStr.toString();
+    /*  String first = "";
+        String second = "";
+        if (str.length() == 0) return str;
+        if (str.length() == 1) {
+            if (str.startsWith("a")) return str;
+            else return "";
+        }
+        if (str.length() >= 2) {
+            first = String.valueOf(str.charAt(0));
+            second = String.valueOf(str.charAt(1));
+            if (!first.equals("a")) first = "";
+            if (!second.equals("b")) second = "";
+        }
+        return first + second + str.substring(2);    */
+    }
+
     static String without2(String str) {
         if (str.length() < 2) return str;
         if (str.length() == 2) return "";
