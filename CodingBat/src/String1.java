@@ -4,6 +4,12 @@ public class String1 {
 
     }
 
+    static String extraFront(String str) {
+        if (str.length() <= 2) return str + str + str;
+        String newStr = str.substring(0, 3);
+        return newStr + newStr + newStr;
+    }
+
     static String minCat(String a, String b) {
         if (a.length() == b.length()) return a + b;
         if (a.length() > b.length()) return a.substring(a.length() - b.length()) + b;
