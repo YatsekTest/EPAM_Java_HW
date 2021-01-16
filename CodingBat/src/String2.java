@@ -3,6 +3,12 @@ public class String2 {
 
     }
 
+    static String repeatFront(String str, int n) {
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < n; i++) newStr.append(str, 0, n - i);
+        return newStr.toString();
+    }
+
     static String repeatEnd(String str, int n) {
         StringBuilder newStr = new StringBuilder();
         String substring = str.substring(str.length() - n);
