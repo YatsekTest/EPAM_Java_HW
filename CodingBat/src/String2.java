@@ -3,6 +3,15 @@ public class String2 {
 
     }
 
+    static boolean xyzThere(String str) {
+        if (str.length() < 3) return false;
+        if (str.startsWith("xyz")) return true;
+        for (int i = 1; i < str.length() - 2; i++) {
+            if (str.substring(i).startsWith("xyz") && str.charAt(i - 1) != '.') return true;
+        }
+        return false;
+    }
+
     static boolean endOther(String a, String b) {
         return a.toLowerCase().endsWith(b.toLowerCase()) ||
                 b.toLowerCase().endsWith(a.toLowerCase());
