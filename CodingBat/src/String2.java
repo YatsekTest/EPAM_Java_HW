@@ -3,7 +3,9 @@ public class String2 {
 
     }
 
-    public boolean catDog(String str) {
+
+
+    static boolean catDog(String str) {
         int countCat = 0;
         int countDog = 0;
         for (int i = 0; i < str.length(); i++) {
