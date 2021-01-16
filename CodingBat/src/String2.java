@@ -3,6 +3,16 @@ public class String2 {
 
     }
 
+    static String mixString(String a, String b) {
+        StringBuilder newStr = new StringBuilder();
+        String longString = a.length() >= b.length() ? a : b;
+        for (int i = 0; (i < a.length() && i < b.length()); i++) {
+            newStr.append(a.charAt(i));
+            newStr.append(b.charAt(i));
+        }
+        return newStr.toString() + longString.substring(Math.min(a.length(), b.length()));
+    }
+
     static boolean xyBalance(String str) {
         int x = -1;
         int y = -1;
