@@ -3,7 +3,14 @@ public class String2 {
 
     }
 
-
+    static int countCode(String str) {
+        int count = 0;
+        if (str.length() < 4) return 0;
+        for (int i = 0; i < str.length() - 4; i++) {
+            if (str.substring(i).startsWith("co") && str.charAt(i + 3) == 'e') count++;
+        }
+        return count;
+    }
 
     static boolean catDog(String str) {
         int countCat = 0;
