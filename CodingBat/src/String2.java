@@ -3,6 +3,15 @@ public class String2 {
 
     }
 
+    static String repeatSeparator(String word, String sep, int count) {
+        StringBuilder newStr = new StringBuilder();
+        if (count == 0) return "";
+        for (int i = 0; i < count - 1; i++) {
+            newStr.append(word).append(sep);
+        }
+        return newStr.toString() + word;
+    }
+
     static String repeatFront(String str, int n) {
         StringBuilder newStr = new StringBuilder();
         for (int i = 0; i < n; i++) newStr.append(str, 0, n - i);
