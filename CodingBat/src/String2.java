@@ -3,6 +3,11 @@ public class String2 {
 
     }
 
+    static boolean endOther(String a, String b) {
+        return a.toLowerCase().endsWith(b.toLowerCase()) ||
+                b.toLowerCase().endsWith(a.toLowerCase());
+    }
+
     static int countCode(String str) {
         int count = 0;
         if (str.length() < 4) return 0;
