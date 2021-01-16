@@ -3,6 +3,16 @@ public class String2 {
 
     }
 
+    static boolean xyBalance(String str) {
+        int x = -1;
+        int y = -1;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') x = i;
+            if (str.charAt(i) == 'y') y = i;
+        }
+        return y >= x;
+    }
+
     static boolean bobThere(String str) {
         if (str.length() < 3) return false;
         for (int i = 0; i < str.length() - 2; i++) {
