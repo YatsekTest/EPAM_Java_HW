@@ -1,6 +1,14 @@
 public class String2 {
     public static void main(String[] args) {
+        System.out.println(prefixAgain("aa", 1));
+    }
 
+    static boolean prefixAgain(String str, int n) {
+        String prefix = str.substring(0, n);
+        for (int i = n; i < str.length(); i++) {
+            if (str.substring(i).startsWith(prefix)) return true;
+        }
+        return false;
     }
 
     static String repeatSeparator(String word, String sep, int count) {
