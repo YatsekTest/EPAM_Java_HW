@@ -3,6 +3,14 @@ public class String2 {
 
     }
 
+    static String repeatEnd(String str, int n) {
+        StringBuilder newStr = new StringBuilder();
+        String substring = str.substring(str.length() - n);
+        //noinspection StringRepeatCanBeUsed
+        for (int i = 0; i < n; i++) newStr.append(substring);
+        return newStr.toString();
+    }
+
     static String mixString(String a, String b) {
         StringBuilder newStr = new StringBuilder();
         String longString = a.length() >= b.length() ? a : b;
