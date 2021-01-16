@@ -3,6 +3,14 @@ public class String2 {
 
     }
 
+    static int countHi(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i).startsWith("hi")) count++;
+        }
+        return count;
+    }
+
     static String doubleChar(String str) {
         StringBuilder newStr = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
