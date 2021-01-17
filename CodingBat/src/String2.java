@@ -1,9 +1,19 @@
-import java.util.Arrays;
-
 public class String2 {
     public static void main(String[] args) {
 //        System.out.println(prefixAgain("aa", 1));
 //        System.out.println(sameStarChar("*xa*a*b"));
+    }
+
+    static String plusOut(String str, String word) {
+        StringBuilder newStr = new StringBuilder();
+        int len = word.length();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.substring(i).startsWith(word)) {
+                newStr.append(word);
+                i += len - 1;
+            } else newStr.append("+");
+        }
+        return newStr.toString();
     }
 
     static String starOut(String str) {
