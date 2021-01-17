@@ -1,6 +1,20 @@
 public class String2 {
     public static void main(String[] args) {
 //        System.out.println(prefixAgain("aa", 1));
+        System.out.println(sameStarChar("*xa*a*b"));
+    }
+
+    /* На самом деле, не понял задания (точнее понял, но по всей видимости неверно) и почему тесты работают
+       так как работают. Решение посмотрел в интернете и легче не стало. Приведённое решение это упрощённое
+       и оптимизированное на мой взгляд решение из интернета. */
+    static boolean sameStarChar(String str) {
+        boolean result = true;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '*' && i > 0 && i < str.length() - 1) {
+                result = str.charAt(i - 1) == str.charAt(i + 1);
+            }
+        }
+        return result;
     }
 
     static String getSandwich(String str) {
