@@ -3,6 +3,14 @@ public class String2 {
 //        System.out.println(prefixAgain("aa", 1));
     }
 
+    static String getSandwich(String str) {
+        if (str.length() < 11) return "";
+        int first = str.indexOf("bread");
+        int last = str.lastIndexOf("bread");
+        if (first == -1 && last == -1) return "";
+        return str.substring(first + 5, last);
+    }
+
     static boolean xyzMiddle(String str) {
         if (str.length() < 3) return false;
         if (str.length() == 3) return str.equals("xyz");
