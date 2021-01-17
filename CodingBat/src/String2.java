@@ -1,6 +1,16 @@
 public class String2 {
     public static void main(String[] args) {
-        System.out.println(prefixAgain("aa", 1));
+//        System.out.println(prefixAgain("aa", 1));
+    }
+
+    static boolean xyzMiddle(String str) {
+        if (str.length() < 3) return false;
+        if (str.length() == 3) return str.equals("xyz");
+        int middle = str.length() / 2;
+        if ((str.length() % 2 == 0) && (str.substring(middle - 2).startsWith("xyz")
+                || str.substring(middle - 1).startsWith("xyz"))) return true;
+        return (str.length() % 2 == 1) && (str.substring(middle - 1).startsWith("xyz")
+                || str.substring(middle).equals("xyz"));
     }
 
     static boolean prefixAgain(String str, int n) {
