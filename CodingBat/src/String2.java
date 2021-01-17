@@ -1,7 +1,20 @@
+import java.util.Arrays;
+
 public class String2 {
     public static void main(String[] args) {
 //        System.out.println(prefixAgain("aa", 1));
 //        System.out.println(sameStarChar("*xa*a*b"));
+    }
+
+    static String starOut(String str) {
+        // solution using regexp: return str.replaceAll("(\\w?\\*\\w?)", "");
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '*' || (i > 0 && str.charAt(i - 1) == '*')) continue;
+            if (i < str.length() - 1 && str.charAt(i + 1) == '*') continue;
+            newStr.append(str.charAt(i));
+        }
+        return newStr.toString();
     }
 
     static String zipZap(String str) {
