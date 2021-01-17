@@ -1,7 +1,21 @@
 public class String2 {
     public static void main(String[] args) {
 //        System.out.println(prefixAgain("aa", 1));
-        System.out.println(sameStarChar("*xa*a*b"));
+//        System.out.println(sameStarChar("*xa*a*b"));
+    }
+
+    static String zipZap(String str) {
+        if (str.length() < 3) return str;
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'z' && str.charAt(i + 2) == 'p') {
+                newStr.append(str.charAt(i)).append(str.charAt(i + 2));
+                i += 2;
+            } else {
+                newStr.append(str.charAt(i));
+            }
+        }
+        return String.valueOf(newStr);
     }
 
     static String oneTwo(String str) {
