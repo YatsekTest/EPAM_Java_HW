@@ -4,6 +4,16 @@ public class String2 {
         System.out.println(sameStarChar("*xa*a*b"));
     }
 
+    static String oneTwo(String str) {
+        if (str.length() < 3) return "";
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 0; i < str.length() && (str.length() - i) >= 3; i += 3) {
+            String subStr = str.substring(i, i + 3);
+            newStr.append(subStr.substring(1)).append(subStr.charAt(0));
+        }
+        return newStr.toString();
+    }
+
     /* На самом деле, не понял задания (точнее понял, но по всей видимости неверно) и почему тесты работают
        так как работают. Решение посмотрел в интернете и легче не стало. Приведённое решение это упрощённое
        и оптимизированное на мой взгляд решение из интернета. */
