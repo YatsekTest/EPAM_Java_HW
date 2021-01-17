@@ -4,6 +4,20 @@ public class String2 {
 //        System.out.println(sameStarChar("*xa*a*b"));
     }
 
+    static String wordEnds(String str, String word) {
+        if (str.equals(word)) return "";
+        StringBuilder newStr = new StringBuilder();
+        int wLen = word.length();
+        int sLen = str.length();
+        if (str.startsWith(word)) newStr.append(str.charAt(wLen));
+        for (int i = 1; i < sLen - wLen; i++) {
+            if (str.substring(i).startsWith(word))
+                newStr.append(str.charAt(i - 1)).append(str.charAt(i + wLen));
+        }
+        if (str.endsWith(word)) newStr.append(str.charAt(sLen - wLen - 1));
+        return newStr.toString();
+    }
+
     static String plusOut(String str, String word) {
         StringBuilder newStr = new StringBuilder();
         int len = word.length();
