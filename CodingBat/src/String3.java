@@ -1,6 +1,27 @@
+import java.util.Locale;
+
 public class String3 {
     public static void main(String[] args) {
 
+    }
+
+    public String withoutString(String base, String remove) {
+        base = base.replace(remove.toUpperCase(), "");
+        base = base.replace(remove.toLowerCase(), "");
+        return base.replace(remove, "");
+
+/*      Ниже приведено моё неполное решение (не все случаи учитывает и не все тесты до конца проходит.
+        Но я решил его не доделывать, т.к. в интернете увидел гениальное решение в три строчки (приведено выше).
+
+        String newStr = base;
+        for (int i = 0; i < base.length(); i++) {
+            if (base.substring(i).toLowerCase().startsWith(remove.toLowerCase())) {
+                newStr = base.replace(remove.toLowerCase(), "");
+                break;
+            }
+        }
+        return newStr;
+*/
     }
 
     public int countYZ(String str) {
