@@ -5,6 +5,15 @@ public class String3 {
 
     }
 
+    public boolean equalIsNot(String str) {
+        int countIs = 0, countNot = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.substring(i).startsWith("is")) countIs++;
+            if (str.substring(i).startsWith("not")) countNot++;
+        }
+        return countIs == countNot;
+    }
+
     public String withoutString(String base, String remove) {
         base = base.replace(remove.toUpperCase(), "");
         base = base.replace(remove.toLowerCase(), "");
