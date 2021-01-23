@@ -3,7 +3,23 @@ import java.util.regex.Pattern;
 
 public class String3 {
     public static void main(String[] args) {
-        System.out.println(sumNumbers("aa11b33"));
+//        System.out.println(sumNumbers("aa11b33"));
+        System.out.println(notReplace("Dis is bliss is"));
+    }
+
+    static String notReplace(String str) {
+        StringBuilder result = new StringBuilder();
+        int len = str.length();
+        for (int i = 0; i < len; i++) {
+            if (i - 1 >= 0 && Character.isLetter(str.charAt(i - 1))
+                    || i + 2 < len && Character.isLetter(str.charAt(i + 2))) {
+                result.append(str.charAt(i));
+            } else if (i + 1 < len && str.startsWith("is", i)) {
+                result.append("is not");
+                i++;
+            } else result.append(str.charAt(i));
+        }
+        return result.toString();
     }
 
     static int sumNumbers(String str) {
