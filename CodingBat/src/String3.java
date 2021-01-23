@@ -1,8 +1,32 @@
-import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class String3 {
     public static void main(String[] args) {
+        System.out.println(sumNumbers("aa11b33"));
+    }
 
+    static int sumNumbers(String str) {
+        str = str + " ";
+        int count = 0;
+        StringBuilder tmpStr = new StringBuilder("0");
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {
+                tmpStr.append(str.charAt(i));
+            } else {
+                count += Integer.parseInt(tmpStr.toString());
+                tmpStr = new StringBuilder("0");
+            }
+        }
+        return count;
+
+        /*int result = 0;
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()) {
+            result += Integer.parseInt(matcher.group());
+        }
+        return result;*/
     }
 
     public int maxBlock(String str) {
