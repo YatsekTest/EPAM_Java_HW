@@ -5,6 +5,18 @@ public class String3 {
 
     }
 
+    public int maxBlock(String str) {
+        int len = str.length();
+        int count = 0;
+        int tmpCount = 1;
+        for (int i = 0; i < len; i++) {
+            if (i < len - 1 && str.charAt(i) == str.charAt(i + 1)) tmpCount++;
+            else tmpCount = 1;
+            if (tmpCount > count) count = tmpCount;
+        }
+        return count;
+    }
+
     public String mirrorEnds(String string) {
         String result = "";
         int len = string.length();
