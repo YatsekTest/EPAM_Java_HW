@@ -5,6 +5,16 @@ public class String3 {
 
     }
 
+    public int sumDigits(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {
+                count += Integer.parseInt(String.valueOf(str.charAt(i)));
+            }
+        }
+        return count;
+    }
+
     public int countTriple(String str) {
         int count = 0;
         if (str.length() < 3) return 0;
