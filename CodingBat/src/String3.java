@@ -5,6 +5,15 @@ public class String3 {
 
     }
 
+    public String sameEnds(String string) {
+        String result = "";
+        for (int i = 0; i < string.length() / 2 + 1; i++) {
+            String substr = string.substring(string.length() - i);
+            if (string.substring(0, i).equals(substr)) result = substr;
+        }
+        return result;
+    }
+
     public int sumDigits(String str) {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
