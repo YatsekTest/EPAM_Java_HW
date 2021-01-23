@@ -5,6 +5,16 @@ public class String3 {
 
     }
 
+    public String mirrorEnds(String string) {
+        String result = "";
+        int len = string.length();
+        for (int i = 0; i < len; i++) {
+            if (string.charAt(i) == string.charAt(len - 1 - i)) result += string.charAt(i);
+            else return result;
+        }
+        return result;
+    }
+
     public String sameEnds(String string) {
         String result = "";
         for (int i = 0; i < string.length() / 2 + 1; i++) {
