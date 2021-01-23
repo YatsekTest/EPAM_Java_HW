@@ -5,6 +5,15 @@ public class String3 {
 
     }
 
+    public int countTriple(String str) {
+        int count = 0;
+        if (str.length() < 3) return 0;
+        for (int i = 2; i < str.length(); i++) {
+            if (str.charAt(i) == str.charAt(i - 1) && str.charAt(i) == str.charAt(i - 2)) count++;
+        }
+        return count;
+    }
+
     public boolean gHappy(String str) {
         boolean isHappy = true;
         for (int i = 0; i < str.length(); i++) {
@@ -15,7 +24,6 @@ public class String3 {
         }
         return isHappy;
     }
-
 
     public boolean equalIsNot(String str) {
         int countIs = 0, countNot = 0;
