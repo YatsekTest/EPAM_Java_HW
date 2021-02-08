@@ -6,6 +6,14 @@ public class Map2 {
 
     }
 
+    public Map<String, String> pairs(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+        for (String string : strings) {
+            map.put(string.substring(0, 1), string.substring(string.length() - 1));
+        }
+        return map;
+    }
+
     public Map<String, Integer> wordLen(String[] strings) {
         Map<String, Integer> map = new HashMap<>();
         for (String string : strings) {
