@@ -6,6 +6,15 @@ public class Map2 {
 
     }
 
+    public Map<String, Integer> wordCount(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String string : strings) {
+            if (!map.containsKey(string)) map.put(string, 1);
+            else map.put(string, map.get(string) + 1);
+        }
+        return map;
+    }
+
     public Map<String, String> pairs(String[] strings) {
         Map<String, String> map = new HashMap<>();
         for (String string : strings) {
