@@ -5,6 +5,14 @@ public class Map1 {
 
     }
 
+    public Map<String, String> mapAB2(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b") && map.get("a").equals(map.get("b"))) {
+            map.remove("a");
+            map.remove("b");
+        }
+        return map;
+    }
+
     public Map<String, String> topping3(Map<String, String> map) {
         if (map.containsKey("potato")) map.put("fries", map.get("potato"));
         if (map.containsKey("salad")) map.put("spinach", map.get("salad"));
