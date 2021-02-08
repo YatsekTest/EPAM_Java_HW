@@ -6,6 +6,15 @@ public class Map2 {
 
     }
 
+    public Map<String, Boolean> wordMultiple(String[] strings) {
+        Map<String, Boolean> map = new HashMap<>();
+        for (String string : strings) {
+            if (map.containsKey(string)) map.put(string, true);
+            else map.put(string, false);
+        }
+        return map;
+    }
+
     public String wordAppend(String[] strings) {
         Map<String, Integer> map = new HashMap<>();
         StringBuilder result = new StringBuilder();
