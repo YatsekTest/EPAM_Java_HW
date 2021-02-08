@@ -6,6 +6,20 @@ public class Map2 {
 
     }
 
+    public String wordAppend(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        StringBuilder result = new StringBuilder();
+        for (String key : strings) {
+            if (map.containsKey(key)) {
+                int value = map.get(key);
+                value++;
+                if (value % 2 == 0) result.append(key);
+                map.put(key, value);
+            } else map.put(key, 1);
+        }
+        return result.toString();
+    }
+
     public Map<String, String> firstChar(String[] strings) {
         Map<String, String> map = new HashMap<>();
         for (String string : strings) {
