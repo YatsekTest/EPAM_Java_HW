@@ -6,6 +6,19 @@ public class Map2 {
 
     }
 
+    public Map<String, String> firstChar(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+        for (String string : strings) {
+            String firstChar = String.valueOf(string.charAt(0));
+            StringBuilder builder = new StringBuilder();
+            for (String str : strings) {
+                if (str.startsWith(firstChar)) builder.append(str);
+            }
+            map.put(firstChar, builder.toString());
+        }
+        return map;
+    }
+
     public Map<String, Integer> wordCount(String[] strings) {
         Map<String, Integer> map = new HashMap<>();
         for (String string : strings) {
