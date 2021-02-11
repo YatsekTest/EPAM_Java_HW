@@ -6,6 +6,25 @@ public class Map2 {
 
     }
 
+    public String[] firstSwap(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < strings.length; i++) {
+            String key = String.valueOf(strings[i].charAt(0));
+            if (map.containsKey(key)) {
+                int flag = map.get(key);
+                if (flag == -1) continue;
+                // swap
+                int pos = map.get(key);
+                String tmp = strings[pos];
+                strings[pos] = strings[i];
+                strings[i] = tmp;
+                // set a flag
+                map.put(key, -1);
+            } else map.put(key, i);
+        }
+        return strings;
+    }
+
     public String[] allSwap(String[] strings) {
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
